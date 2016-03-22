@@ -3,9 +3,8 @@ package org.spring.mongodb.model;
 /**
  * Created by xiaoy on 2016/3/3.
  */
-public class Person {
+public class Person extends BaseModel{
 
-    private String id;
     private String name;
     private int age;
 
@@ -14,9 +13,6 @@ public class Person {
         this.age = age;
     }
 
-    public String getId() {
-        return id;
-    }
     public String getName() {
         return name;
     }
@@ -26,6 +22,6 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person [id=" + id + ", name=" + name + ", age=" + age + "]";
+        return "Person [id=" + getId() + ", name=" + name + ", age=" + age + "]";
     }
 }

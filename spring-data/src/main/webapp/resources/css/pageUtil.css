@@ -1,0 +1,7 @@
+/*****分页******/
+#page{ clear:both; float:left; width:100%; margin:10px 0}
+#page a{ padding:10px 15px; display:inline-block; border:#ddd 1px solid; border-radius:2px; margin-right:10px;}
+#page a:hover,#page a.sel{ background:#08c; color:#fff; border:#08c 1px solid}
+.page—ji{ display:inline-block}
+.page—ji label{ float:left}
+.page—ji input{ border:#ddd 1px solid; width:50px; padding:9px}
