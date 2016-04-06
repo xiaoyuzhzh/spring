@@ -3,6 +3,9 @@ package org.spring.mongodb.controller;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.apache.log4j.spi.LoggerFactory;
+import org.slf4j.Logger;
 import org.spring.mongodb.dao.LogMessageDAO;
 import org.spring.mongodb.dao.LogMessageRepository;
 import org.spring.mongodb.model.LogMessage;
@@ -59,7 +62,6 @@ public class LogController {
         pageQO.setPageSize(pageSize);
         pageQO.setPageNo(pageNo);
         pageQO.setBaseQO(logMessageQO);
-
         PageResult<LogMessage> pageResult = logMessageDAO.queryWithPage(pageQO);
 
 

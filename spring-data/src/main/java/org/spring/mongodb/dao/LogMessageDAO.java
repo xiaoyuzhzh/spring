@@ -34,7 +34,7 @@ public class LogMessageDAO {
             }
 
             if(logMessageQO.getLevel()!=null){
-                criteria.and("level").is(logMessageQO.getLevel());
+                criteria.and("level").regex(logMessageQO.getLevel(),"i");
             }
 
             if(logMessageQO.getProjectId()!=null){

@@ -1,5 +1,9 @@
 package org.spring.mongodb.pojo.qo;
 
+import com.alibaba.fastjson.annotation.JSONField;
+
+import java.util.Date;
+
 /**
  * Created by xiaoy on 2016/3/17.
  */
@@ -25,6 +29,16 @@ public class LogMessageQO {
      * 日志内容
      */
     private String content;
+    /**
+     * 起始时间
+     */
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
+    private Date startDate;
+    /**
+     * 结束时间
+     */
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
+    private Date endDate;
 
     public String getProjectId() {
         return projectId;

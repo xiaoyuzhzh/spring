@@ -15,6 +15,8 @@ public class PageResult<T> {
 
     private long totalCount;
 
+    private Long pageCount;
+
     private List<T> list;
 
     public int getPageNo() {
@@ -39,6 +41,13 @@ public class PageResult<T> {
 
     public void setTotalCount(long totalCount) {
         this.totalCount = totalCount;
+        if(pageCount == null){
+            if(pageSize!=0&&totalCount!=0){
+                pageCount = (totalCount-1)/pageSize +1;
+            }else{
+                pageCount = 1l;
+            }
+        }
     }
 
     public List<T> getList() {
@@ -47,5 +56,9 @@ public class PageResult<T> {
 
     public void setList(List<T> list) {
         this.list = list;
+    }
+
+    public long getPageCount() {
+        return pageCount;
     }
 }
