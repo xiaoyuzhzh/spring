@@ -1,7 +1,5 @@
 package org.spring.mongodb.model;
 
-import org.springframework.data.annotation.Id;
-
 /**
  * Created by xiaoy on 2016/3/17.
  */

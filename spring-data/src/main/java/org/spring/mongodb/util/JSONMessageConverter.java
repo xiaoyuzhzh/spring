@@ -35,7 +35,6 @@ public class JSONMessageConverter extends AbstractHttpMessageConverter{
 
     @Override
     protected void writeInternal(Object o, HttpOutputMessage outputMessage) throws IOException, HttpMessageNotWritableException {
-        System.out.println(JSON.toJSONString(o));
         IOUtils.write(JSON.toJSONString(o).getBytes("utf-8"),outputMessage.getBody());
     }
 }
